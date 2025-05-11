@@ -35,12 +35,34 @@ h1 {
 }
 
 .image-container {
+  position: relative;
   margin: 10px 30%;
 }
 
 .image-container img {
   width: 100%;
   margin-top: 5px;
+  display: block;
+}
+
+.image-banner {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.image-banner a {
+  color: white;
+  text-decoration: none;
+}
+
+.image-banner a:hover {
+  color: lightgray;
 }
 
 /* Media queries */
