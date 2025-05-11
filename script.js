@@ -32,7 +32,7 @@ function displayPhotos(){
         setAttributes(img, {
             src: photo.urls.regular,
             alt: photo.alt_description,
-            title: photo.alt_desscription
+            title: photo.alt_description
         });
        
         //put <img> inside <a>, then put both insideContainer Element
@@ -47,6 +47,7 @@ async function getPhotos() {
     try {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
+        console.log(photosArray);
         displayPhotos();
     } catch(error) {
         console.log(error);
