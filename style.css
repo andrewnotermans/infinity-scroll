@@ -36,13 +36,63 @@ h1 {
 
 .image-container {
   margin: 10px 30%;
+  position: relative; /* Make the container relative for positioning the banner */
+}
+
+.image-wrapper {
+  position: relative; /* Enable positioning for the banner */
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.image-wrapper .banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-wrapper:hover .banner {
+  opacity: 1; /* Show the banner on hover */
 }
 
 .image-container img {
   width: 100%;
   margin-top: 5px;
+  display: block;
 }
 
+.image-container .banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-container:hover .banner {
+  opacity: 1; /* Show the banner on hover */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 /* Media queries */
 @media screen and (max-width: 600px) {
   h1 {
