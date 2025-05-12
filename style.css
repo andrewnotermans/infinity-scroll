@@ -36,7 +36,7 @@ h1 {
 
 .image-container {
   margin: 10px 30%;
-  position: relative; /* Make the container relative for positioning the banner */
+  position: relative; /* Make the container relative for positioning the images */
 }
 
 .image-wrapper {
@@ -62,6 +62,7 @@ h1 {
   transition: opacity 0.3s ease; /* Smooth transition */
 }
 
+/* Apply hover effect only to the specific image-wrapper being hovered */
 .image-wrapper:hover .banner {
   opacity: 1; /* Show the banner on hover */
 }
@@ -72,35 +73,23 @@ h1 {
   display: block;
 }
 
-.image-container .banner {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Transparent black background */
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition */
-}
-
-.image-container:hover .banner {
-  opacity: 1; /* Show the banner on hover */
-}
+/* Remove this rule to fix the issue */
+/* .image-container:hover .banner {
+  opacity: 1;
+} */
 
 a {
   text-decoration: none;
   color: white;
 }
+
 /* Media queries */
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 20px;
-    ;
   }
 
-  .image-container{
+  .image-container {
     margin: 10px;
   }
 }
