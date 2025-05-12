@@ -73,10 +73,6 @@ h1 {
   display: block;
 }
 
-/* Remove this rule to fix the issue */
-/* .image-container:hover .banner {
-  opacity: 1;
-} */
 
 a {
   text-decoration: none;
